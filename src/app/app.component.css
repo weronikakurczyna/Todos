@@ -1,0 +1,56 @@
+.todo__container {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo__header {
+  text-align: center;
+  color: rgb(185, 104, 72);
+}
+
+.todo__main {
+  align-content: center;
+}
+
+.todo__main--input {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.todo__main--button {
+  display: block;
+  margin: 10px auto;
+  width: 30%;
+  height: 40px;
+}
+
+ul {
+  padding-left: 0;
+  align-content: center;
+}
+
+li {
+  margin: 10px auto;
+  list-style-type: none;
+  width: 50%;
+  word-break: break-word;
+  border: solid 1px #ccc;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.todo__clear {
+  display: block;
+  margin: auto;
+}
+
+span {
+  margin-top: 3px;
+  font-size: 13px;
+  color: rgb(216, 129, 15);
+  float: right;
+}
