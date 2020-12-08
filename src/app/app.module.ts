@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TodoService } from './todo.service';
+import { TodoService } from './service/todo.service';
 import { LocalStorageService } from './local-storage.service';
+import { TodosComponent } from './todos/todos.component';
+import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

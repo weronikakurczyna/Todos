@@ -1,20 +1,3 @@
 <div class="todo__container">
-
-  <h1 class="todo__header">TODO List</h1>
-
-  <div class="todo__main">
-    <input #in class="todo__main--input" type="text" placeholder="Tutaj wpisz swoje zadanie"
-           (keyup.enter)="onAdd($event.target.value)"
-           (keyup.enter)="$event.target.value=''">
-    <button class="todo__main--button" (click)="onAdd(in.value)" (click)="in.value=''">Dodaj zadanie</button>
-  </div>
-
-  <h3 class="todo__header" *ngIf="todos.length > 0 ">Twoje zadania</h3>
-  <ul>
-    <li *ngFor="let item of todos"
-    > {{ item.label}} <span> {{ item.date }} </span>
-    </li>
-  </ul>
-  <button *ngIf="todos.length > 0" class="todo__clear" (click)="onClearTodos()">Wyczyść</button>
-
+  <app-todos></app-todos>
 </div>

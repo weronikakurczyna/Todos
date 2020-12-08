@@ -14,7 +14,6 @@ export class LocalStorageService {
     this.storedTodo = JSON.parse(localStorage.getItem(storageName));
   }
 
-
   get() {
     this.storedTodo = JSON.parse(localStorage.getItem(storageName));
     return [...this.storedTodo];
@@ -22,16 +21,6 @@ export class LocalStorageService {
 
   post(item) {
     this.storedTodo.push(item);
-    return this.update();
-  }
-
-  put(item, changes) {
-    Object.assign(this.storedTodo[this.findItemIndex(item)], changes);
-    return this.update();
-  }
-
-  destroy(item) {
-    this.storedTodo.splice(this.findItemIndex(item), 1);
     return this.update();
   }
 
@@ -43,10 +32,6 @@ export class LocalStorageService {
   private update() {
     localStorage.setItem(storageName, JSON.stringify(this.storedTodo));
     return this.get();
-  }
-
-  private findItemIndex(item) {
-    return this.storedTodo.indexOf(item);
   }
 
 }

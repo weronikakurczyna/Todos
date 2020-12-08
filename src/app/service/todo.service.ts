@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
 import { of } from 'rxjs';
-import { LocalStorageService } from './local-storage.service';
+import { LocalStorageService } from '../local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
