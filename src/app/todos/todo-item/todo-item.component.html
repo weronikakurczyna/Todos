@@ -1,1 +1,4 @@
-{{ item.label }} <span> {{ item.date | todo }} </span>
+{{ item.label }}
+<span> {{ item.date | todo }}
+    <button (click)="onRemoveTodo()">Usuń</button>
+</span>

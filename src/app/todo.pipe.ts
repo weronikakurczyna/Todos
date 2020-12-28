@@ -9,8 +9,8 @@ export class TodoPipe implements PipeTransform {
   transform(value: moment.Moment): String {
     moment.locale('pl');
     const now = moment();
-    const minuteAgo = moment().subtract("00:00:10"); 
-    const hourAgo = moment().subtract("01:00:00"); 
+    const minuteAgo = moment().subtract("00:00:10");
+    const hourAgo = moment().subtract("01:00:00");
     const yesterday = moment().subtract(1, 'day');
 
     //value = moment().subtract("00:00:00");
@@ -33,11 +33,8 @@ export class TodoPipe implements PipeTransform {
     else if (yesterday.isSame(value, 'day')) {
       return 'Wczoraj';
     }
-
     else {
       return moment(value).format('LLL');
     }
-
   }
-
 }

@@ -1,3 +1,7 @@
+        * {
+            font-family: inherit;
+        }
+
         .todo__header {
             text-align: center;
             color: rgb(185, 104, 72);
@@ -26,17 +30,14 @@
             height: 40px;
             border-radius: 10px;
             border: none;
-            font-family: 'Arial';
             font-weight: bold;
             background-color: rgb(236, 183, 152);
-            
         }
 
         .todo__main--button:hover, .todo__clear:hover {
             cursor: pointer;
             background-color: #ddd;
         }
-
 
         ul {
             padding-left: 0;
@@ -45,13 +46,14 @@
 
         li {
             margin: 10px auto;
+            font-size: 18px;
             list-style-type: none;
             width: 50%;
             height: auto;
             word-break: break-word;
             border: solid 2px #ccc;
             border-radius: 10px;
-            padding: 20px;
+            padding: 28px;
             font-weight: bold;
             background-color: rgba(247, 226, 226, 0.493)
         }
@@ -63,13 +65,11 @@
             width: 30%;
             border-radius: 10px;
             border: 1px rgb(95, 94, 94);
-            font-family: Arial;
             font-weight: bold;
-
         }
 
         @media(max-width: 767px) {
             li, .todo__main--input {
-                width: auto;
+                width: 70%;
             }
         }

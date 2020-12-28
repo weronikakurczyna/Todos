@@ -9,13 +9,15 @@ import { TodoService } from '../service/todo.service';
 export class TodosComponent implements OnInit {
   todos = [];
 
+  itemFromChild;
+
   constructor(private todoService: TodoService) {
     console.log(todoService.getTodos());
   }
 
   ngOnInit() {
-    this.refreshTodos()
-    setInterval(() => this.refreshTodos(), 10000)
+    this.refreshTodos();
+    setInterval(() => this.refreshTodos(), 10000);
   }
 
   onAdd(text: string) {
@@ -29,6 +31,10 @@ export class TodosComponent implements OnInit {
     this.todos = [...this.todoService.removeTodos()];
   }
 
+  onRemoveTodo(item) {
+    this.itemFromChild = item;
+    this.todos = this.todoService.removeTodo();
+  }
 
   private refreshTodos(): void {
     this.todoService.getTodos().subscribe(todos => {
@@ -37,5 +43,4 @@ export class TodosComponent implements OnInit {
     });
   }
 
-  
 }

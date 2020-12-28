@@ -28,4 +28,8 @@ export class TodoService {
     return this.storage.destroyAll();
   }
 
+  removeTodo() {
+    return this.storage.destroy(this.getTodos());
+  }
+
 }

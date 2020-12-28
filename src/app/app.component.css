@@ -1,4 +1,5 @@
 .todo__container {
-    width: 100%;
-    font-family: Helvetica, sans-serif;
+    width: 80%;
+    margin: auto;
+    font-family: "Lato";
 }
