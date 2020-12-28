@@ -1,50 +1,75 @@
-.todo__header {
-    text-align: center;
-    color: rgb(185, 104, 72);
-}
+        .todo__header {
+            text-align: center;
+            color: rgb(185, 104, 72);
+        }
 
-.todo__main {
-    align-content: center;
-}
+        .todo__main {
+            align-content: center;
+        }
 
-.todo__main--input {
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 40px;
-    border-radius: 10px;
-}
+        .todo__main--input {
+            display: block;
+            margin: auto;
+            width: 50%;
+            height: 40px;
+            border-radius: 10px;
+        }
 
-.todo__main--button {
-    display: block;
-    margin: 10px auto;
-    width: 30%;
-    height: 40px;
-    border-radius: 10px;
-}
+        .todo__main--input:hover {
+            background-color: rgb(248, 245, 245);
+        }
 
-ul {
-    padding-left: 0;
-    align-content: center;
-}
+        .todo__main--button {
+            display: block;
+            margin: 10px auto;
+            width: 30%;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Arial';
+            font-weight: bold;
+            background-color: rgb(236, 183, 152);
+            
+        }
 
-li {
-    margin: 10px auto;
-    list-style-type: none;
-    width: 50%;
-    height: auto;
-    word-break: break-word;
-    border: solid 1px #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    font-weight: bold;
-}
+        .todo__main--button:hover, .todo__clear:hover {
+            cursor: pointer;
+            background-color: #ddd;
+        }
 
-.todo__clear {
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 10%;
-    border-radius: 10px;
-    border: solid 1px rgb(95, 94, 94);
-}
+
+        ul {
+            padding-left: 0;
+            align-content: center;
+        }
+
+        li {
+            margin: 10px auto;
+            list-style-type: none;
+            width: 50%;
+            height: auto;
+            word-break: break-word;
+            border: solid 2px #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            font-weight: bold;
+            background-color: rgba(247, 226, 226, 0.493)
+        }
+
+        .todo__clear {
+            display: block;
+            margin: auto;
+            height: 30px;
+            width: 30%;
+            border-radius: 10px;
+            border: 1px rgb(95, 94, 94);
+            font-family: Arial;
+            font-weight: bold;
+
+        }
+
+        @media(max-width: 767px) {
+            li, .todo__main--input {
+                width: auto;
+            }
+        }

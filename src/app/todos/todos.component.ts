@@ -14,10 +14,8 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.todoService.getTodos().subscribe(todos => {
-      console.log(todos);
-      this.todos = todos;
-    });
+    this.refreshTodos()
+    setInterval(() => this.refreshTodos(), 10000)
   }
 
   onAdd(text: string) {
@@ -31,4 +29,13 @@ export class TodosComponent implements OnInit {
     this.todos = [...this.todoService.removeTodos()];
   }
 
+
+  private refreshTodos(): void {
+    this.todoService.getTodos().subscribe(todos => {
+      console.log(todos);
+      this.todos = todos;
+    });
+  }
+
+  
 }

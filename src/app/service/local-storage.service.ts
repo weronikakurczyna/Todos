@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 const storageName = 'todo_list';
 
@@ -11,11 +11,20 @@ export class LocalStorageService {
   private storedTodo;
 
   constructor() {
-    this.storedTodo = JSON.parse(localStorage.getItem(storageName));
+    this.get();
   }
 
   get() {
-    this.storedTodo = JSON.parse(localStorage.getItem(storageName));
+    this.storedTodo = (localStorage.getItem(storageName) != null) ?
+      JSON.parse(localStorage.getItem(storageName)) :
+      [];
+/*
+    if (localStorage.getItem(storageName) != null) {
+      this.storedTodo = JSON.parse(localStorage.getItem(storageName));
+    } else {
+      this.storedTodo = [];
+    }
+    */
     return [...this.storedTodo];
   }
 

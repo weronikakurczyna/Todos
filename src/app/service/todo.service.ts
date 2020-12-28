@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
 import { of } from 'rxjs';
-import { LocalStorageService } from '../local-storage.service';
+import { LocalStorageService } from './local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +19,7 @@ export class TodoService {
     return this.storage.post(
       {
         label: todo,
-        date: moment().format('MMMM Do YYYY, h:mm:ss a')
+        date: moment()
       }
     );
   }
