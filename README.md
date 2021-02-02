@@ -1,4 +1,3 @@
 **TODO application**
 
-![Todo](/images/todo.png)
-Format: ![Alt Text](url)
+![Todo](https://ibb.co/RShFHfQ)
